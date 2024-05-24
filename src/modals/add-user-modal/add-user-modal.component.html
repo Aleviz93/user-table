@@ -1,0 +1,32 @@
+<div class="add-user-modal-wrapper">
+  <div class="modal-title">Add user</div>
+  <form #form="ngForm" (ngSubmit)="addEditUser(form)">
+    <mat-form-field>
+      <mat-label>Full Name </mat-label>
+      <input matInput type="text" [(ngModel)]="newUser.fullName" name="fullName" required>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput type="email" [(ngModel)]="newUser.email" name="email" required appEmailMask>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>Phone</mat-label>
+      <input matInput type="text" [(ngModel)]="newUser.phone" name="phone" appPhoneMask>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Department</mat-label>
+      <input matInput type="text" [(ngModel)]="newUser.department" name="department">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Manager</mat-label>
+      <mat-select [(value)]="newUser.manager">
+        <mat-option *ngFor="let user of data.users" [value]="user">{{ user.fullName }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-flat-button type="submit">{{ data.edit ? 'Edit user' : 'Add user' }}</button>
+  </form>
+</div>

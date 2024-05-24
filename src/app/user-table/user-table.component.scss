@@ -1,0 +1,29 @@
+.test-table-wrapper {
+  width: 980px;
+  margin: 50px auto;
+  border-radius: 12px;
+  border: 1px solid #c4c6d0;
+  padding: 16px;
+  background: #fdfbff;
+
+  .table-header {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+      font-size: 32px;
+    }
+  }
+  
+  .mat-column-actions {
+    width: 140px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  button {
+    margin-left: 8px;
+  }
+}

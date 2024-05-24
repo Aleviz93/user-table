@@ -1,0 +1,17 @@
+.add-user-modal-wrapper {
+  padding: 24px;
+
+  .modal-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    mat-form-field {
+      width: 320px;
+    }
+  }
+}
